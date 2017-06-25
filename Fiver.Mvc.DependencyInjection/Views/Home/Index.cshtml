@@ -1,0 +1,10 @@
+﻿@using Fiver.Mvc.DependencyInjection.Models.Home
+@inject ILookupService Lookup
+
+<select name="genres">
+    <option value="-1">--Select Genre--</option>
+    @foreach (var item in Lookup.Genres)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+</select>
